@@ -1,12 +1,18 @@
 #include <iostream>
-
+#include <string>
 using namespace std;
 
 int convertRomanToInt(string s);
 
 int main() {
 
-	cout << convertRomanToInt("MCMLXII");
+	string input;
+	while (true) {
+		cout << "Enter Roman number or Q to quit: ";
+		getline(cin, input);
+		if (input == "Q" || input == "q") break;
+		cout << input << " = " << convertRomanToInt(input) << endl;
+	}
 
 	return 0;
 }
